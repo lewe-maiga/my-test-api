@@ -15,18 +15,17 @@ return [
     |
     */
 
-    'paths' => ['api/*', 'api/todo', "*"],
+    'paths' => ['api/*', 'sanctum/csrf-cookie'],
 
-    'allowed_methods' => ['POST', 'GET', 'DELETE', 'PUT', '*'],
-    'allowed_origins' => ['http://localhost:5500', 'https://client.myapp.com'],
+    'allowed_methods' => ['*'],
 
+    'allowed_origins' => ['*'],
 
-    'allowed_origins_patterns' => ["Google"],
+    'allowed_origins_patterns' => [],
 
-    'allowed_headers' => ['X-Custom-Header', 'Upgrade-Insecure-Requests', '*'],
+    'allowed_headers' => ['*'],
 
-
-    'exposed_headers' => ['*'],
+    'exposed_headers' => [],
 
     'max_age' => 0,
 
