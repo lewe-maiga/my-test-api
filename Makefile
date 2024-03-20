@@ -1,7 +1,7 @@
 .PHONY: install database-env dev-env
 
 deploy:
-	ssh o2switch 'cd ~/immogestion.online/my-test-api && eval `ssh-agent -s` && ssh-add ~/.ssh/github && git pull && make install'
+	ssh o2switch 'cd ~/immogestion.online/my-test-api && eval `ssh-agent -s` && ssh-add ~/.ssh/github && git pull origin main && make install'
 
 install: vendor/autoload.php .env public/storage public/build/manifest.json
 	php artisan cache:clear
