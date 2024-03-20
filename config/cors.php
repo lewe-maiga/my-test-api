@@ -18,6 +18,8 @@ return [
     'paths' => ['api/*', 'api/todo', "*"],
 
     'allowed_methods' => ['POST', 'GET', 'DELETE', 'PUT', '*'],
+    'allowed_origins' => ['http://localhost:5500', 'https://client.myapp.com'],
+
 
     'allowed_origins_patterns' => ["Google"],
 
