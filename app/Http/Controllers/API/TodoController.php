@@ -8,6 +8,12 @@ use Illuminate\Http\Request;
 
 class TodoController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware("auth:api");
+    }
+
     /**
      * Display a listing of the resource.
      */
@@ -51,6 +57,6 @@ class TodoController extends Controller
     public function destroy(Todo $todo)
     {
         $todo->delete();
-        return response()->json(null,0);
+        return response()->json($todo);
     }
 }
