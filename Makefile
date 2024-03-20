@@ -5,7 +5,7 @@ deploy:
 
 install: vendor/autoload.php .env public/storage public/build/manifest.json
 	php artisan cache:clear
-	php artisan migrate --force
+	php artisan migrate:fresh --seed --force
 
 .env:
 	cp .env.example .env
