@@ -5,9 +5,7 @@
 
     RewriteEngine On
 
-    # Redirect Trailing Slashes If Not A Folder...
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)/$ /$1 [L,R=307]
+    Header set Access-Control-Allow-Origin 'origin-list'
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
