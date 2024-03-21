@@ -4,6 +4,9 @@
     </IfModule>
 
     RewriteEngine On
+    RewriteEngine On
+	RewriteBase /
+		try_files $uri $uri/ /index.php?$query_string;
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
